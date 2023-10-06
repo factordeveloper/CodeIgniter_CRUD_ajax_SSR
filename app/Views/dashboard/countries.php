@@ -82,7 +82,7 @@
         });
    });
 
-
+ //FETCH  COUNTRIES
    $('#countries-table').DataTable({
        "processing":true,
        "serverSide":true,

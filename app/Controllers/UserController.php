@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use Config\Services;
+use App\Models\Country;
+
 class UserController extends BaseController
 {
 
@@ -27,8 +30,8 @@ class UserController extends BaseController
     }
 
     public function addCountry(){
-        $countryModel = new \App\Models\Country();
-        $validation = \Config\Services::validation();
+        $countryModel = new Country();
+        $validation = Services::validation();
         $this->validate([
              'country_name'=>[
                  'rules'=>'required|is_unique[countries.country_name]',
